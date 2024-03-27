@@ -1,0 +1,70 @@
+{{> partials/_structure/head
+        title="Каталог интернет-магазинов"
+        keywords="Каталог интернет-магазинов"
+        description="Каталог интернет-магазинов"
+}}
+
+    {{> partials/_header/header}}
+    <main>
+        {{> partials/app-breadcrumbs/breadcrumbs title= 'Бренды' }}
+        <div class="container">
+            <h1>Каталог интернет-магазинов</h1>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 sm:grid-cols-3 gap-7 mt-5 sm:mt-6 pt-1 sm:pt-0">
+                <div class="w-full">
+                    {{> partials/app-card/card-catalog title="Ecco" ecco=true }}
+                </div>
+                <div class="w-full">
+                    {{> partials/app-card/card-catalog title="Reserved" reserved=true }}
+                </div>
+                <div class="w-full">
+                    {{> partials/app-card/card-catalog title="Cropp" cropp=true }}
+                </div>
+                <div class="w-full">
+                    {{> partials/app-card/card-catalog title="Ecco" ecco=true }}
+                </div>
+                <div class="w-full">
+                    {{> partials/app-card/card-catalog title="Cropp" cropp=true }}
+                </div>
+                <div class="w-full">
+                    {{> partials/app-card/card-catalog title="Ecco" ecco=true }}
+                </div>
+                <div class="w-full">
+                    {{> partials/app-card/card-catalog title="Reserved" reserved=true }}
+                </div>
+                <div class="w-full">
+                    {{> partials/app-card/card-catalog title="Cropp" cropp=true }}
+                </div>
+                <div class="w-full">
+                    {{> partials/app-card/card-catalog title="Ecco" ecco=true }}
+                </div>
+                <div class="w-full">
+                    {{> partials/app-card/card-catalog title="Reserved" reserved=true }}
+                </div>
+                <div class="w-full">
+                    {{> partials/app-card/card-catalog title="Cropp" cropp=true }}
+                </div>
+                <div class="w-full">
+                    {{> partials/app-card/card-catalog title="Ecco" ecco=true }}
+                </div>
+                <div class="w-full">
+                    {{> partials/app-card/card-catalog title="Cropp" cropp=true }}
+                </div>
+                <div class="w-full">
+                    {{> partials/app-card/card-catalog title="Reserved" reserved=true }}
+                </div>
+                <div class="w-full">
+                    {{> partials/app-card/card-catalog title="Reserved" reserved=true }}
+                </div>
+                <div class="w-full">
+                    {{> partials/app-card/card-catalog title="Cropp" cropp=true }}
+                </div>
+            </div>
+            <div class="mt-5 sm:mt-6 md:hidden">
+                {{> partials/app-pagination/pagination }}
+            </div>
+        </div>
+      </main>
+    {{> partials/_footer/footer}}
+  </body>
+</html>

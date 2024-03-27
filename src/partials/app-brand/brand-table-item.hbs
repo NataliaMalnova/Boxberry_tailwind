@@ -1,0 +1,14 @@
+<div class="brand-table__row" id="{{id}}">
+    <div class="brand-table__title flex justify-between items-center w-full">
+        <p class="text-big flex items-center">
+            {{title}}
+        </p>
+    </div>
+    <div class="brand-table__content show-more js--show-more" data-show-content-row="3">
+        {{#if small}}
+            {{> brand_table_row2 }}
+        {{else}}
+            {{> brand_table_row1 }}
+        {{/if}}
+    </div>
+</div>

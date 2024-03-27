@@ -1,0 +1,23 @@
+{{> partials/_structure/head
+        title="Бренды"
+        keywords="Бренды"
+        description="Бренды"
+}}
+    {{> partials/_header/header}}
+    <main>
+        {{> partials/app-breadcrumbs/breadcrumbs
+                title= 'Каталог интернет-магазинов'
+        }}
+        <div class="container page-brand">
+            <h1>Бренды</h1>
+
+            <h2>Популярные бренды</h2>
+
+            {{> partials/app-brand/brands2 }}
+            {{> partials/app-brand/brand-slider-letter }}
+            {{> partials/app-brand/brand-table }}
+        </div>
+      </main>
+    {{> partials/_footer/footer}}
+  </body>
+</html>

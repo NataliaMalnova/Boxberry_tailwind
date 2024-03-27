@@ -1,0 +1,17 @@
+<div class="overlay overlay-city flex items-center justify-center overflow-hidden w-full h-full">
+    <div class="overlay-wrap relative">
+        <p class="fz-large text-center">Выберите город</p>
+        <div class="overlay-close overlay-close--absolute cursor-pointer svg-grey js--overlay-close">
+            {{> ../_images/close}}
+        </div>
+        <div class="overlay-wrap__content flex flex-col mt-5 pt-3">
+            <div class="flex flex-col md:flex-row sm:items-center w-full">
+                {{> overlay-search}}
+                <a href="" class="flex flex-shrink mt-3 md:mt-0 md:ml-5 underline">Определить автоматически</a>
+            </div>
+            <div class="overlay-city__container mt-5">
+                {{> ../app-datalist/datalist-city}}
+            </div>
+        </div>
+    </div>
+</div>

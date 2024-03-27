@@ -1,0 +1,17 @@
+<div class="card-shop w-full flex flex-col justify-between h-full">
+    <div class="">
+        {{#if card_tip}}
+            <div class="card-shop__tip fz-small">{{card_tip}}</div>
+        {{/if}}
+        <a href class="card-shop__image w-full justify-center items-center">
+            <img src="{{card_img}}" alt="product" class="image-contain" />
+        </a>
+        <a href="" class="fz-primary mt-4 block">{{card_title}}</a>
+    </div>
+    <div class="">
+        {{#if card_price_old}}
+            <a href="" class="card-shop__price--old fz-small block mt-1">{{card_price_old}} ₽</a>
+        {{/if}}
+        <a href="" class="card-shop__price fz-large font-bold block">{{card_price}}<span class="fz-text text-greyDark mr-1">₽</span></a>
+    </div>
+</div>

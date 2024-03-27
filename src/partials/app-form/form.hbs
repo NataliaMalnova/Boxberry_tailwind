@@ -1,0 +1,42 @@
+<form class="form-basic mt-5">
+    <div class="grid grid-cols-1 md:grid-cols-3 md:gap-7">
+        <div class="w-full">
+            <label class="mb-2 block fz-text">Достоинства</label>
+            <textarea class="form-basic__input flex items-center w-full" placeholder="Что вам понравилось" data-textarea=""></textarea>
+        </div>
+        <div class="w-full mt-2 md:mt-0">
+            <label class="mb-2 block fz-text">Недостатки</label>
+            <textarea class="form-basic__input flex items-center w-full px-3" placeholder="Что вам не понравилось" data-textarea=""></textarea>
+        </div>
+        <div class="w-full mt-2 md:mt-0">
+            <label class="mb-2 block fz-text">Комментарий</label>
+            <textarea class="form-basic__input flex items-center w-full px-3" placeholder="Другие впечатления" data-textarea=""></textarea>
+        </div>
+        <div class="w-full mt-2 md:mt-5">
+            <label class="mb-2 block fz-text">Имя</label>
+            <input class="form-basic__input flex items-center w-full px-3" type="Введите ваше имя" placeholder="Имя" required="" />
+        </div>
+        <div class="w-full mt-2 md:mt-5">
+            <label class="mb-2 block fz-text">E-mail</label>
+            <input class="form-basic__input flex items-center w-full px-3" type="Ваш e-mail" placeholder="E-mail" required="" />
+        </div>
+        <div class="w-full mt-2 md:mt-5">
+            <fieldset>
+                <legend class="mb-2 block fz-text">Добавьте фото</legend>
+                <input type="hidden" id="MAX_FILE_SIZE" name="MAX_FILE_SIZE" value="300000" />
+            </fieldset>
+            <div class="form-upload flex items-center relative cursor-pointer js-form-upload">
+                <input type="file" id="fileselect" name="fileselect[]" multiple="multiple" class="cursor-pointer w-full h-full" />
+                <div class="flex items-center" id="filedrag">
+                    <div class="mr-3 svg-block">
+                        {{> ../_images/photo }}
+                    </div>
+                    <p class="fz-primary text-greyDark"> <span class="text-pink">Нажмите на ссылку&nbsp;</span>или перетащите фото сюда</p>
+                </div>
+            </div>
+            <div class="flex items-center"></div>
+            <div id="messages" class="mt-3"></div>
+        </div>
+    </div>
+    <button class="btn btn-gradient mt-4 md:mt-5" type="submit">Отправить </button>
+</form>

@@ -1,0 +1,31 @@
+<div class="relative sm:w-[280px] md:w-[380px] flex items-center sm:flex-col">
+    {{#if win}}
+        <div class="block-compare__hint flex items-center bg-orange rounded-full w-max px-[18px] py-[10px] sm:px-4 sm:py-2 absolute sm-max:top-[-10px] sm-max:left-[30px]">
+            {{> ../_images/win}}
+            <span class="text-white font-semibold text-xs sm:text-sm ml-2">Победитель при сравнении</span>
+        </div>
+    {{/if}}
+    <div class="sm:h-[260px] md:h-[450px] sm-max:mr-[30px] sm-max:m-w-[50px]">
+        {{#if win}}
+            <img src="../../images/compare/compare-1.png" alt="compare" class="m-auto  image-contain">
+        {{else}}
+            <img src="../../images/compare/compare-2.png" alt="compare" class="m-auto  image-contain">
+        {{/if}}
+    </div>
+
+
+    <div class="flex flex-col justify-between card-match__content">
+        <p class="sm:text-center mt-1 sm:mt-3 text-tiny sm:text-large">{{title}}</p>
+        <div class="flex flex-col sm:items-center sm:justify-center mt-[8px] sm:mt-[45px] relative">
+            {{#if old_price}}
+                <p class="line-through text-sm sm:text-tiny sm:text-center sm:absolute sm:bottom-[55px]">{{old_price}} ₽ </p>
+            {{/if}}
+            <div class="flex items-center">
+                <p class="font-semibold text-large sm:text-5xl sm:text-center">{{price}}<span class="text-greyDark text-base font-normal ml-1">₽</span></p>
+                {{#if old_price}}
+                    <span class="bg-pink text-white px-[6px] py-[3px] text-xs rounded-[5px] font-bold ml-7 w-max">{{discont}}</span>
+                {{/if}}
+            </div>
+        </div>
+    </div>
+</div>

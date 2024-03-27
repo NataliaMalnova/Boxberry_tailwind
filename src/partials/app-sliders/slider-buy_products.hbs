@@ -1,0 +1,30 @@
+<div class="buy-sliders w-full">
+    <div class="slider-basic__top flex items-center justify-between relative mb-3">
+        <h3 class="mb:mr-3 flex flex-shrink">С этим товаром покупают</h3>
+        <div class="slider-basic__line w-full hidden md:flex">&nbsp;</div>
+        <div class="slider-basic__nav flex items-center relative ms-3">
+            <div class="swiper-button-prev flex items-center justify-center relative cursor-pointer">{{> ../_images/arr_slider }}</div>
+            <div class="swiper-button-next flex items-center justify-center relative cursor-pointer">{{> ../_images/arr_slider }}</div>
+        </div>
+    </div>
+
+    <div class="buy-slider overflow-hidden lg:mr-4 flex">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                {{> ../app-card/card-product }}
+            </div>
+            <div class="swiper-slide">
+                {{> ../app-card/card-product }}
+            </div>
+            <div class="swiper-slide">
+                {{> ../app-card/card-product }}
+            </div>
+            <div class="swiper-slide">
+                {{> ../app-card/card-product }}
+            </div>
+            <div class="swiper-slide">
+                {{> ../app-card/card-product }}
+            </div>
+        </div>
+    </div>
+</div>
