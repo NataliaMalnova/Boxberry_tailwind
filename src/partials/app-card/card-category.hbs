@@ -1,26 +1,28 @@
 <div class="card-category relative">
-    <div class="relative h-[143px] md:h-[222px]">
+    <a href="" class="block relative h-[143px] md:h-[222px]">
         <img src="../../images/catalog/1.png" alt="" class="object-contain m-auto w-full h-full">
         {{#if card_discont}}
             <span class="absolute bottom-0 bg-pink px-1 py-[3px] text-xs text-white w-max rounded-[5px] font-bold">{{card_discont}}</span>
         {{/if}}
-    </div>
+    </a>
     <div class="h-[calc(100%-143px)] md:h-[calc(100%-222px)] flex flex-col justify-between">
         <a href="" class="block mt-5 text-small hover:underline">{{card_title}}
             {{> ../app-tooltip/tooltip2 }}
         </a>
         <div class="mt-9">
             {{#if card_price_old}}
-                <p class="line-through text-grey50">{{card_price_old}}</p>
+                <a href="" class="line-through text-grey50">{{card_price_old}}</a>
             {{/if}}
 
             <div class="flex items-center justify-between">
-                <p class="text-large font-semibold">{{card_price}} <span class="font-light text-grey50 ml-1 text-small">₽</span></p>
+                <a href="" class="text-large font-semibold">{{card_price}} <span class="font-light text-grey50 ml-1 text-small">₽</span></a>
                 <div class="flex card-category__action">
-                    {{> ../app-tooltip/tooltip-comparison }}
-                    <div class="ml-9 ">
+                    <a href="" class="block">
+                        {{> ../app-tooltip/tooltip-comparison }}
+                    </a>
+                    <a href="" class="block ml-9">
                         {{> ../app-tooltip/tooltip-like }}
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
