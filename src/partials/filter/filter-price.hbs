@@ -1,0 +1,31 @@
+<div class="mt-[44px] md:mt-[52px] filter show-more js--show-more active" data-show-start="0">
+    <div class="filter-top flex justify-between items-center w-full cursor-pointer show-more--btn js--show-more--btn">
+        <p class="text-small">Цена</p>
+        {{> ../_images/arrow }}
+    </div>
+    <div class="content-to-hide js--show-more--content">
+        <div class="filter-range js--filter-range" data-range-min="{{range_min}}" data-range-max="{{range_max}}" data-range-start-1="{{range_start_1}}"
+             data-range-start-2="{{range_start_2}}">
+            <div class="px-1 mt-9 js--filter-range-slider"></div>
+            <div class="flex justify-between items-center mt-4">
+                <div class="filter-range__input w-full flex items-center justify-between hover:border-grey75">
+                    <span class="text-tiny mr-1 leading-normal">от</span>
+                    <input type="text" onkeyup="this.value = this.value.replace(/[^\d]/g,'');" class="text-tiny w-full js--filter-range-input rounded-none">
+                    {{#if rub}}
+                        <span class="text-greyDark text-tiny ml-8 leading-normal">₽</span>
+                    {{/if}}
+                </div>
+
+                <span class="text-greyDark mx-8 block">-</span>
+                <div class="filter-range__input w-full flex items-center justify-between">
+                    <span class="text-tiny mr-1 leading-normal">до</span>
+                    <input type="text" onkeyup="this.value = this.value.replace(/[^\d]/g,'');" class="w-full js--filter-range-input rounded-none">
+                    {{#if rub}}
+                        <span class="text-greyDark text-tiny ml-8 leading-normal">₽</span>
+                    {{/if}}
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

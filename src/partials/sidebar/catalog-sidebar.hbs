@@ -1,0 +1,20 @@
+<div class="sidebar flex flex-col shrink-0 md:w-[222px] md:mr-[68px] js--filter">
+    <div class="flex items-center md:hidden mb-[36px] cursor-pointer js--filter-mobile-close">
+        <div class="rotate-90">
+            {{> ../_images/arrow }}
+        </div>
+        <p class="ml-3 text-lg">Фильтры</p>
+    </div>
+    {{> ../filter/filter-type }}
+    {{> ../filter/filter-price range_min="0" range_max="18960" range_start_1="0" range_start_2="5000" rub=true }}
+    {{> ../filter/filter-price_tag }}
+    {{> ../filter/filter-brand }}
+    {{> ../filter/filter-color }}
+    {{> ../filter/filter-size }}
+    {{> ../filter/filter-link }}
+    {{> ../filter/filter-checkbox }}
+    {{> ../filter/filter-range range_min="0" range_max="10000" range_start_1="0" range_start_2="5000" }}
+
+    <button class="btn btn-green mt-[51px] md:mt-[55px] bg-lime rounded-[5px] w-full py-[13px] font-semibold">Применить</button>
+    <p class="mt-4 md:mt-5 text-center cursor-pointer text-grey25 js--filter-clear">Очистить все</p>
+</div>

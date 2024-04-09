@@ -1,7 +1,4 @@
 /** @type {import('tailwindcss').Config} */
-
-const defaultTheme = require('tailwindcss/defaultTheme')
-
 module.exports = {
   content: ['./src/**/*.{hbs,js}'],
   darkMode: 'class',
@@ -32,14 +29,21 @@ module.exports = {
         secondary: '#B3B5BF',
         pink: '#ED1651',
         pinkDark: '#DD154C',
+        pinkDark2:  '#CD2050',
         green: '#A6CE39',
         greenDark: '#33b309',
         light: '#EFEFF0',
         lightSecondary: '#DFE2EA',
         grey: '#C6C9D5',
         grey2: '#eeeff0',
+        grey3: '#ECEDF0',
+        grey4: '#EDEFF1',
         greyBorder: '#DADBE2',
         greyLight: '#CED1DB',
+        grey25: '#5B5E67',
+        grey50: '#818696',
+        grey75: '#C2C4CD',
+        grey100: '#DADEE3',
         greySecondary: '#B2B5BF',
         greyDark: '#7C808E',
         greenLight: '#EBF0DC',
@@ -47,12 +51,16 @@ module.exports = {
         greyTiny: ' #EDEEF1',
         grizzly: '#D6D9E0',
         greyElem: '#b4b6bf',
-        orange: '#ED9512'
+        orange: '#ED9512',
+        arrow: '#818696',
+        lime: '#9CCD18',
+        blue: '#315284'
       },
       fontSize: {
           xs: ['12px', '15px'],
           sm: ['13px', '150%'],
           tiny: '14px',
+          small: '15px',
           base: ['16px', '150%'],
           lg: ['18px', '130%'],
           'large': ['20px', '130%'],
@@ -71,7 +79,9 @@ module.exports = {
         4: '24px',
         5: '30px',
         6: '60px',
-        7: '20px'
+        7: '20px',
+        8: '8px',
+        9: '16px'
       },
 
       maxHeight: {
@@ -180,7 +190,7 @@ module.exports = {
           position: 'relative',
           margin: '0 auto',
           '@screen md': {
-            maxWidth: '970px',
+            maxWidth: '960px',
             paddingLeft: '0px',
             paddingRight: '0px',
           },

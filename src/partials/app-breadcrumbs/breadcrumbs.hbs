@@ -1,9 +1,27 @@
 <div class="breadcrumbs mt-5 sm:mt-6 pt-1 sm:pt-0 mb-1 sm:mb-2">
     <div class="container m-auto">
-        <div class="flex items-center flex-wrap">
-            <a href="/">Главная</a>
-            <div class="breadcrumbs-separator ml-1 mr-1 sm:ml-3 sm:mr-3"></div>
-            <a href="/">{{title}}</a>
+        <div class="swiper basic-slider overflow-hidden flex">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide flex items-center w-auto">
+                    <a href="/" class="text-greyDark hover:underline">Главная</a>
+                </div>
+                <div class="swiper-slide flex items-center w-auto">
+                    <div class="w-[4px] h-[4px] rounded-full bg-greyLight ml-8 mr-8 sm:ml-3 sm:mr-3"></div>
+                    <a href="/" class="text-greyDark hover:underline">{{title}}</a>
+                </div>
+                {{#if title2}}
+                    <div class="swiper-slide flex items-center w-auto">
+                        <div class="w-[4px] h-[4px] rounded-full bg-greyLight ml-8 mr-8 sm:ml-3 sm:mr-3"></div>
+                        <a href="/" class="text-greyDark hover:underline">{{title2}}</a>
+                    </div>
+                {{/if}}
+                {{#if title3}}
+                    <div class="swiper-slide flex items-center w-auto">
+                        <div class="w-[4px] h-[4px] rounded-full bg-greyLight ml-8 mr-8 sm:ml-3 sm:mr-3"></div>
+                        <a href="/" class="text-greyDark hover:underline">{{title3}}</a>
+                    </div>
+                {{/if}}
+            </div>
         </div>
     </div>
 </div>

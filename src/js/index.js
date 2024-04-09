@@ -1,7 +1,11 @@
 import Swiper, { Navigation, Thumbs, Grid } from 'swiper';
+
+import 'tippy.js/dist/tippy.css';
+import 'tippy.js/themes/light.css';
 import 'swiper/css';
 import "../css/fonts.css";
 import "../css/style.css";
+import "../css/nouislider.css";
 import * as header from '../partials/_header/header.js'
 import changeBurger from '../partials/burger/burger.js'
 import showModal from "../partials/app-overlay/overlay.js";
@@ -14,9 +18,13 @@ import scrolling from './components/scroll.js'
 import changeFixedTop from '../partials/app-fixed/fixed.js'
 import {showAccordion} from "../partials/app-category/category.js";
 import {switchTabs} from "../partials/app-tabs/tabs";
+import {changeTag, clearFilter, filterRange, openFilterMobile, searchFilter} from "../partials/filter/filter";
+import {showTooltip} from "./components/showTooltip";
+import {openSelect} from "../partials/select/select";
 
 // Document Loaded
 document.addEventListener("DOMContentLoaded", () => {
+
   header.changeDatalist();
   changeBurger();
   catalog.openCatalogMenu();
@@ -33,8 +41,19 @@ document.addEventListener("DOMContentLoaded", () => {
   showMore();
   switchTabs();
   sliderComparePaginationInit();
+  filterRange();
+  changeTag();
+  searchFilter();
+  clearFilter();
+  openSelect();
+  openFilterMobile();
 
+  showTooltip();
   new Swiper(".brand-letter-sliders .swiper", {
+    slidesPerView: 'auto'
+  });
+
+  new Swiper(".breadcrumbs .swiper", {
     slidesPerView: 'auto'
   });
 

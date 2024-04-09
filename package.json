@@ -42,6 +42,8 @@
     "flatpickr": "^4.6.13",
     "handlebars-webpack-plugin": "^1.5.0",
     "jsvectormap": "^1.5.1",
-    "swiper": "^9.1.1"
+    "nouislider": "^15.7.1",
+    "swiper": "^9.1.1",
+    "tippy.js": "^6.3.7"
   }
 }

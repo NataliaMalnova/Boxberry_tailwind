@@ -43,7 +43,7 @@
     }
 
     h1 {
-        @apply text-lg sm:text-3xl
+        @apply text-large sm:text-3xl
     }
     h2, .font-h2 {
         @apply text-2xl sm:text-4xl
@@ -811,18 +811,7 @@
         overflow: hidden;
         transition: max-height 0.5s ease;
     }
-    .breadcrumbs a {
-        @apply text-greyDark
-    }
-    .breadcrumbs a:hover {
-        text-decoration: underline;
-    }
-    .breadcrumbs .breadcrumbs-separator {
-        width: 4px;
-        height: 4px;
-        border-radius: 4px;
-        @apply bg-greyLight;
-    }
+
     .pagination-item {
         @apply border border-solid border-grizzly text-primary;
         border-radius: 50%;
@@ -1731,18 +1720,13 @@
     }
 
     .app-trends__link {
-        margin-right: 6px;
-        margin-bottom: 12px;
         padding: 8px 12px;
-        color: #7C808E;
-        text-decoration: underline;
     }
     @media (min-width: 991px) {
         .app-trends__link {
             padding: 14px 24px;
         }
     }
-
     .app-trends-sg .app-trend {
         border-radius: 10px;
     }
@@ -2129,6 +2113,231 @@
         @apply bg-pink border-pink
     }
 
+    .filter-top svg path {
+       @apply fill-arrow
+    }
+
+    .filter-top svg {
+       transition: .3s;
+        transform: rotate(180deg)
+    }
+    .filter.active .filter-top svg {
+        transform: rotate(0deg)
+    }
+    .filter-option {
+        scrollbar-color: #DADEE3 none;
+    }
+
+    .filter-option::-webkit-scrollbar {
+        width: 4px;
+    }
+    .filter-option::-webkit-scrollbar-thumb {
+        background-color: #DADEE3;
+        border-radius: 5px;
+    }
+    .filter-range__input {
+        @apply border border-solid border-grey100 rounded-[5px] p-8
+    }
+    .filter-range__input input:focus {
+
+    }
+    .tag.active {
+        @apply bg-grey100
+    }
+    .filter-search__option {
+        top: calc(100% + 16px);
+        left: 0;
+        box-shadow: 0 4px 50px 10px #5E688133;
+    }
+
+    .tippy-tooltip.tomato-theme {
+        @apply bg-green
+
+    }
+    .filter-checkbox input[type="checkbox"]:checked,
+    .filter-checkbox input[type="checkbox"]:not(:checked) {
+        position: absolute;
+        left: -9999px;
+    }
+    .filter-checkbox input[type="checkbox"]:checked + label:before,
+    .filter-checkbox input[type="checkbox"]:not(:checked) + label:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 20px;
+        height: 20px;
+        border: 1px solid #CAD0D8;
+        background-color: #ffffff;
+        border-radius: 5px;
+    }
+    .filter-checkbox input[type="checkbox"]:checked + label:before {
+        @apply bg-pink border-pink
+    }
+    .filter-checkbox input[type="checkbox"]:checked + label:after,
+    .filter-checkbox input[type="checkbox"]:not(:checked) + label:after {
+        content: "";
+        position: absolute;
+        transition: all 0.2s ease;
+    }
+
+    .filter-checkbox input[type="checkbox"]:checked + label:after,
+    .filter-checkbox input[type="checkbox"]:not(:checked) + label:after {
+        left: 5px;
+        top: 6px;
+        width: 10px;
+        height: 5px;
+        border-radius: 1px;
+        border-left: 2px solid #fff;
+        border-bottom: 2px solid #fff;
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+    }
+
+    .filter-checkbox input[type="checkbox"]:not(:checked) + label:after {
+        opacity: 0;
+    }
+
+    .filter-checkbox input[type="checkbox"]:checked + label:after{
+        opacity: 1;
+    }
+
+    .app-select__title {
+        @apply border border-solid border-grey100 rounded-[10px] py-8 px-2
+    }
+
+    .app-select__title svg {
+        width: 8px;
+        transition: .3s;
+    }
+
+    .app-select__title svg path {
+        @apply fill-grey50
+    }
+
+    .app-select__title.active svg {
+        transform: rotate(180deg)
+    }
+
+    .app-select__content {
+        position: absolute;
+        top: calc(100% + 16px);
+        overflow: hidden;
+        will-change: transform;
+        transition: transform .3s;
+        transform: scaleY(0);
+        transform-origin: 50% 0;
+        z-index: 9;
+        border-radius: 10px;
+        box-shadow: 0 4px 50px 10px rgba(94, 104, 129, 0.2);
+    }
+
+    .app-select__content.select__checkboxShow{
+         will-change: transform;
+         transition: transform .3s;
+         transform: scaleY(1);
+         transform-origin: 50% 0;
+         z-index: 999;
+     }
+
+    .app-select input:checked  + label{
+        @apply bg-grey3
+    }
+    .tooltip:hover svg path,
+    .tooltip:hover svg circle {
+       @apply stroke-black;
+    }
+    .card-category__action svg  {
+         transition: .3s;
+        height: 18px;
+    }
+    .card-category__action svg path,
+    .card-category__action svg rect {
+        @apply fill-grey75
+    }
+    .card-category__action svg:hover path,
+    .card-category__action svg:hover rect {
+        @apply fill-black
+    }
+    .pagination-sq .pagination-item {
+        width: 44px;
+        height: 44px;
+        @apply rounded-[5px] border-none
+    }
+    .pagination-sq .pagination-item.active {
+        @apply bg-pink text-white font-semibold
+    }
+    .pagination-sq .pagination-item:hover.active {
+        @apply bg-pinkDark2
+    }
+
+    .pagination-sq .pagination-item:hover {
+        @apply border border-solid border-grey100
+    }
+
+    .pagination-item_arrow {
+        width: 44px;
+        height: 44px;
+    }
+    @media screen and (max-width: 991px) {
+        .pagination-item_arrow,
+        .pagination-sq .pagination-item{
+            width:40px;
+            height: 40px;
+        }
+    }
+
+    .pagination-sq .pagination-item_arrow svg  {
+        transform: rotate(-90deg)
+    }
+    .pagination-sq .pagination-item_arrow svg path{
+        @apply fill-grey50
+    }
+
+    .pagination-sq .pagination-item_arrow:hover svg path{
+        @apply fill-black
+    }
+}
+@media screen and (max-width: 991px) {
+    .filters-mobile{
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: #fff;
+        width: 100%;
+        padding: 20px;
+        overflow: auto;
+        height: 0;
+
+        z-index: -1;
+        opacity: 0;
+    }
+    .filters-mobile.active {
+        height: 100%;
+        z-index: 999;
+        opacity: 1;
+    }
+}
+.tippy-box[data-theme="dark"] {
+    @apply text-sm leading-normal rounded-[5px] bg-black m-0 px-8 py-1
+}
+.tippy-box[data-theme="dark"] .tippy-content {
+    padding: 0;
+}
+.tippy-box[data-theme="dark"] .tippy-arrow {
+    @apply bg-black
+}
+
+.tippy-box[data-theme="light"] {
+    width: 200px;
+    border-radius: 10px;
+    padding: 14px;
+}
+.tippy-box[data-theme="light"] .tippy-arrow {
+   display: none;
 }
 
 @layer utilities {
