@@ -3,33 +3,33 @@ const openCatalogMenu = () => {
 
     if(!wrap) return;
 
-    const btn = document.querySelector('.js--catalog .js--catalog-btn');
+    const buttons = document.querySelectorAll('.js--catalog .js--catalog-btn');
     const menu = document.querySelector('.js--catalog-menu');
 
-    if(!btn || !menu) return;
+    if(buttons.length === 0 || !menu) return;
 
-    const burger = btn.querySelector('.burger');
-
-    let heightStart = menu.offsetHeight;
     menu.style.setProperty('max-height', 0);
+    buttons.forEach(btn => {
+        const burger = btn.querySelector('.burger');
+        btn.addEventListener('click', () => {
+            if (!menu.classList.contains('catalog-show')) {
+                menu.classList.add('catalog-show');
+                if(burger) burger.classList.add('open');
+                //menu.style.setProperty('max-height', menu.scrollHeight + 'px');
+                menu.style.setProperty('max-height', '100vh');
 
-    btn.addEventListener('click', () => {
-        if (!menu.classList.contains('catalog-show')) {
-            menu.classList.add('catalog-show');
-            if(burger) burger.classList.add('open');
-            //menu.style.setProperty('max-height', menu.scrollHeight + 'px');
-            menu.style.setProperty('max-height', '100vh');
-
-            if(window.innerWidth < 992) {
-                document.documentElement.style.overflowY = 'hidden';
+                if(window.innerWidth < 992) {
+                    document.documentElement.style.overflowY = 'hidden';
+                }
+            } else {
+                menu.classList.remove('catalog-show');
+                if(burger) burger.classList.remove('open');
+                menu.style.setProperty('max-height', 0);
+                document.documentElement.style.overflowY = 'auto'
             }
-        } else {
-            menu.classList.remove('catalog-show');
-            if(burger) burger.classList.remove('open');
-            menu.style.setProperty('max-height', 0);
-            document.documentElement.style.overflowY = 'auto'
-        }
-    });
+        });
+    })
+
 
     document.addEventListener('click', function (event) {
 

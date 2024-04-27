@@ -1,34 +1,38 @@
-<div class="footer-app mt-6">
-    <div class="container py-5 relative">
-        <div class="flex flex-col sm:flex-row sm:justify-between items-center">
-            <div class="flex flex-col sm:flex-row-reserve sm:justify-between items-center ">
-                <p class="fz-large footer-delivery ">Отслеживайте доставку
-                    <span class="block sm:inline"></span>и оформляйте
-                    <span class="sm:block"></span>посылки
-                    <span class="font-bold block sm:inline">в новом мобильном приложении
-                        <span class="block sm:inline md:block"></span> Boxberry</span>
-                </p>
-                <div class="footer-banner mt-5 sm:mt-0">
-                    <img src="../../images/footer-baner.png" alt="banner" class="image-contain">
+<div class="footer-app mt-6 rounded-[12px] md:rounded-[20px]">
+    <div class="px-[12px] py-[20px] md:py-[44px] md:px-[52px] relative">
+        <div class="flex flex-col">
+            <p class="text-tiny sm:text-xl-large xl:text-3xl-large footer-delivery md:mr-0 max-w-[60%] md:max-w-[610px]">Отслеживайте доставку
+                и оформляйте посылки в новом мобильном приложении <span class="font-bold"> Boxberry</span>
+            </p>
+            <div class="flex mt-9 md:mt-[27px]">
+                <img src="../../images/qr-code.svg" alt="qr" data-show-modal="overlay-qr" class="hidden md:flex w-[160px] h-[160px] mr-[40px]">
+                <div class="footer-app__link flex sm:flex-col justify-between">
+                    <p class="hidden md:block text-large">Наведите камеру и скачайте <span class="block"></span>
+                        бесплатное приложение <span class="font-bold">Boxberry</span> </p>
+                    <div class="flex">
+                        <a href="https://redirect.appmetrica.yandex.com/serve/459296288253432489?click_id={market_site_footer}" target="_blank" class="relative w-[110px] h-[32px] xl:w-[130px] xl:h-[40px] mr-[3px] sm:mr-8">
+                            <img src="../../images/play-market.jpg" alt="play-market" class="block image-contain">
+                        </a>
+                        <a href="https://redirect.appmetrica.yandex.com/serve/315181103549862936?click_id={market_site_footer}" target="_blank" class="w-[110px] h-[32px] xl:w-[130px] xl:h-[40px] relative block mr-[3px] sm:mr-8">
+                            <img src="../../images/app-store.jpg" alt="app-store" class="image-contain">
+                        </a>
+                        <a href="https://appgallery.huawei.com/#/app/C103283299" target="_blank" class="relative block w-[35px] h-[32px] sm:w-[110px] sm:h-[32px] xl:w-[130px] xl:h-[40px]">
+                            <picture class="w-full">
+                                <source media="(max-width: 768px)" srcset="../../images/app-gallery-mob.png">
+                                <img src="../../images/app-gallery.jpg" srcset="" alt="app-gallery" class="image-contain">
+                            </picture>
+                        </a>
+                    </div>
+
                 </div>
+
             </div>
-            <div class="flex flex-col sm:flex-row">
-                <div class="footer-app__link flex sm:flex-col justify-center mt-5 sm:mt-0">
-                    <a href="https://redirect.appmetrica.yandex.com/serve/459296288253432489?click_id={market_site_footer}" target="_blank" class="relative">
-                        <img src="../../images/play-market.jpg" alt="play-market" class="block image-contain">
-                    </a>
-                    <a href="https://redirect.appmetrica.yandex.com/serve/315181103549862936?click_id={market_site_footer}" target="_blank" class="relative block sm:mt-1 ml-2 sm:ml-0">
-                        <img src="../../images/app-store.jpg" alt="app-store" class="image-contain">
-                    </a>
-                    <a href="https://appgallery.huawei.com/#/app/C103283299" target="_blank" class="relative block sm:mt-1 ml-2 sm:ml-0">
-                        <img src="../../images/app-gallery.jpg" alt="app-gallery" class="image-contain">
-                    </a>
-                </div>
-                <div class="footer-app__qr sm:ml-4 flex items-center justify-between mt-5 sm:mt-0">
-                    <p class="text">Кликните на QR-код <span class="block"></span>
-                        для скачивания</p>
-                    <img src="../../images/qr.png" alt="qr" data-show-modal="overlay-qr">
-                </div>
+
+            <div class="footer-banner sm:mt-0 absolute right-0 top-[-15px] sm:top-auto sm:bottom-[-20px] w-[40%] sm:w-[340px] md:w-[380px] lg:w-[500px]">
+                <picture class="w-full">
+                    <source media="(max-width: 768px)" srcset="../../images/footer-baner-mob.png">
+                    <img src="../../images/footer-baner.png" srcset="" alt="banner" class="image-contain">
+                </picture>
             </div>
         </div>
     </div>

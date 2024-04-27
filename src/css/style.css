@@ -77,6 +77,23 @@
         @apply text-xs text-secondary
     }
 
+    ul.ul-number,
+    ol.ul-number{
+        list-style: auto;
+        padding-left: 24px;
+    }
+    .pages-content p + p {
+        margin-top: 12px;
+    }
+
+    .pages-content h1 {
+        @apply text-large md:text-4xl py-3
+    }
+
+    .pages-content h2 {
+        @apply text-base md:text-xl-large py-3
+    }
+
     input {
         background: #FFFFFF;
         border-radius: 100px;
@@ -781,11 +798,15 @@
     }
 
     .catalog-menu-detail {
-        @apply border-l border-solid border-grey;
+        -webkit-columns: 3;
+        -moz-columns: 3;
+        columns: 3;
+        list-style: none;
+        @apply border-l border-solid border-grey max-w-full
     }
-    .catalog-menu-detail a {
-        width: 220px;
-        margin-right: 18px;
+
+    .js--catalog-menu-detail {
+        @apply overflow-auto w-[calc(100%-0px)] max-h-[680px];
     }
 
     .catalog-menu__modile .catalog-menu__modile-item {
@@ -834,67 +855,8 @@
             text-align: center;
         }
     }
-    .footer-banner {
-        width: 203px;
-    }
-    @media (min-width: 768px) {
-        .footer-banner {
-            position: absolute;
-            bottom: 0;
-            left: -20px;
-        }
-    }
-    @media (min-width: 1280px) {
-        .footer-banner {
-            left: 0;
-        }
-    }
-    @media (max-width: 767.98px) {
-        .footer-delivery {
-            text-align: center;
-        }
-    }
-    @media (min-width: 768px) {
-        .footer-delivery {
-            margin-left: 180px;
-        }
-    }
-    @media (min-width: 1280px) {
-        .footer-delivery {
-            margin-left: 230px;
-        }
-    }
     .footer-app {
         @apply bg-greyBg
-    }
-    .footer-app__link a {
-        max-width: 87px;
-        max-height: 26px;
-        top: 0;
-        transition: 0.4s;
-    }
-    .footer-app__link a:hover {
-        top: -2px;
-    }
-    .footer-app__qr {
-        border-radius: 10px;
-        background: #FFF;
-        padding: 6px 5px 5px 22px;
-        max-width: 280px;
-        height: -webkit-max-content;
-        height: -moz-max-content;
-        height: max-content;
-    }
-    .footer-app__qr img {
-        transition: 0.4s;
-        cursor: pointer;
-        margin: 10px;
-        width: 64px;
-        height: auto;
-    }
-    .footer-app__qr img:hover {
-        -webkit-transform: scale(1.05);
-        transform: scale(1.05);
     }
     @media (max-width: 767.98px) {
         .footer-menu p {
@@ -2298,6 +2260,71 @@
 
     .pagination-sq .pagination-item_arrow:hover svg path{
         @apply fill-black
+    }
+    .categories-card svg {
+        width: auto;
+        height: 100px;
+    }
+    @media screen and (max-width: 991px) {
+        .categories-card svg {
+            width: auto;
+            height: 60px;
+        }
+    }
+    .categories-card svg:not(.stroke) path {
+        @apply fill-pink
+    }
+    .categories-card svg.stroke path {
+        @apply stroke-pink
+    }
+    .form-checkbox input {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+    }
+    .form-checkbox label {
+        display: inline-flex;
+        align-items: center;
+        user-select: none;
+    }
+    .form-checkbox label::before {
+        content: '';
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        flex-shrink: 0;
+        flex-grow: 0;
+        margin-right: 12px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 50% 50%;
+        @apply border border-solid border-pink rounded-[4px]
+    }
+
+    .form-checkbox input:not(:disabled):active+label::before {
+        background-color: #b3d7ff;
+        border-color: #b3d7ff;
+        @apply border border-solid border-pink
+    }
+
+    .form-checkbox input:checked+label::before {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+        @apply border border-solid border-pink bg-pink
+    }
+    .form-checkbox input:disabled+label::before {
+        @apply border border-solid border-grey bg-grey;
+    }
+    .breadcrumbs-wrap {
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+    }
+    .breadcrumbs-wrap  a ,
+    .breadcrumbs-wrap  span {
+        text-align: center;
+        scroll-snap-align: center;
+        flex: none;
+        display: flex;
+        flex-shrink: 0;
     }
 }
 @media screen and (max-width: 991px) {

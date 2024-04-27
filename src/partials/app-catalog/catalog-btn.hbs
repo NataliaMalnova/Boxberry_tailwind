@@ -1,6 +1,12 @@
-<button class="btn btn-primary h-full font-bold flex items-center justify-center js--catalog-btn shrink-0">
+<button class="hidden md:flex btn btn-primary h-full font-bold flex items-center justify-center js--catalog-btn shrink-0">
     <div class="sm:mr-1">
         {{> ../burger/menu }}
     </div>
-    <span class="sm:ml-1 hidden sm:flex">Каталог</span>
+    <span class="sm:ml-1">Каталог</span>
+</button>
+<button class="md:hidden btn btn-primary h-full font-bold flex items-center justify-center js--catalog-btn shrink-0">
+    <div class="sm:mr-1">
+        {{> ../burger/menu }}
+    </div>
+    <span class="hidden sm:flex sm:ml-1">Каталог</span>
 </button>

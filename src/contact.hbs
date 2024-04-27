@@ -1,0 +1,49 @@
+{{> partials/_structure/head
+        title="Контакты"
+        keywords="Каталог интернет-магазинов"
+        description="Каталог интернет-магазинов"
+}}
+
+{{> partials/_header/header}}
+    <main class="pages-content">
+        {{> partials/app-breadcrumbs/breadcrumbs title= 'Контакты' }}
+        <div class="container">
+            <div class="max-w-[900px] mx-auto text-center">
+                <p>Обратите внимание! Каталог товаров от Boxberry - это площадка, где собраны предложения из более чем 300+ магазинов. Мы не продаем, а помогаем найти нужный товар. Если на нашей площадке были нарушены ваши интеллектуальные права, заполните следующую форму с прикреплением ссылок на страницы.</p>
+                <p>По вопросам сотрудничества, заполните следующую форму:</p>
+            </div>
+
+            <form class="form-basic mt-5 max-w-[900px] mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-7">
+                    <div class="w-full">
+                        <label class="mb-2 block fz-text">Имя</label>
+                        <input class="form-basic__input flex items-center w-full px-3" type="text" placeholder="Введите ваше имя" name="user_name" required="" />
+                    </div>
+                    <div class="w-full">
+                        <label class="mb-2 block fz-text">E-mail</label>
+                        <input class="form-basic__input flex items-center w-full px-3" type="email" placeholder="Ваш e-mail" name="user_email" required="" />
+                    </div>
+                    <div class="w-full">
+                        <label class="mb-2 block fz-text">Тема</label>
+                        <input class="form-basic__input flex items-center w-full px-3" type="text" placeholder="Тема" name="user_theme" required="" />
+                    </div>
+                    <div class="w-full col-span-2">
+                        <label class="mb-2 block fz-text">Сообщение</label>
+                        <textarea class="form-basic__input flex items-center w-full px-3" placeholder="Введите сообщение" name="user_es" data-textarea=""></textarea>
+                    </div>
+                    <div class="">
+                        <button class="w-full btn btn-gradient ml-auto mr-0 block mt-5" type="submit">Отправить </button>
+                        <div class="form-checkbox mt-3 ml-3">
+                            <input type="checkbox" checked class="" id="user-policy" name="user_policy" value="yes">
+                            <label for="user-policy" class=" cursor-pointer">Я согласен на обработку моих персональных данных</label>
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+
+        </div>
+      </main>
+    {{> partials/_footer/footer}}
+  </body>
+</html>
