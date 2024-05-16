@@ -5,9 +5,9 @@
                 <div>
                     {{> ../app-catalog/catalog}}
                 </div>
-                <div class="hidden sm:flex items-center cursor-pointer lg:ml-6 md:ml-4 ml-3 lg:pl-3 lg:mr-6 md:mr-4 mr-3 lg:pr-3" data-show-modal="overlay-city">
+                <div class="hidden sm:flex items-center cursor-pointer lg:ml-6 md:ml-4 ml-3 lg:mr-6 md:mr-4 mr-3" data-show-modal="overlay-city">
                     {{> ../_images/location}}
-                    <p class="ml-1">Москва</p>
+                    <p class="header-location ml-1 sm:max-w-[70px] lg:max-w-[100px]">Москва (Московская область)</p>
                 </div>
                 <a href="/" class="header-logo block">
                     <img src="../../images/logo.png" alt="logo" class="image-contain block">
@@ -21,7 +21,7 @@
             </div>
             <div class="header-bottom flex js--search mt-5 sm:mt-0 sm-max:w-full">
                 {{> header-search}}
-                <button class="btn btn-green ml-2 h-full font-bold">Хочу!</button>
+                <a href="" class="btn btn-green ml-2 h-full font-bold">Хочу!</a>
             </div>
             <div class="hidden sm:flex">
                 {{> ../app-like/like }}

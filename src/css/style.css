@@ -258,7 +258,7 @@
         margin: 0 auto;
     }
     .input-search {
-        @apply bg-light w-full rounded-full overflow-hidden;
+        @apply bg-light w-full rounded-full ;
     }
 
     .input-search__svg {
@@ -515,6 +515,12 @@
             min-height: calc(90vh - 200px);
         }
     }
+    .catalog-menu__brand svg  {
+        transform: rotate(-90deg);
+    }
+    .catalog-menu__brand svg path {
+        @apply fill-pink
+    }
     .card-catalog {
         border-radius: 10px;
         min-height: 95px;
@@ -652,21 +658,6 @@
         width: 24px;
         border-radius: 50%;
         @apply border border-solid border-pink;
-    }
-
-    .card-shop {
-        position: relative;
-        height: 100%;
-    }
-
-    .card-shop__image {
-        height: 135px;
-    }
-
-    @media screen and (min-width: 991px) {
-        .card-shop__image {
-            height: 166px;
-        }
     }
 
     .card-shop__price--old {
@@ -1696,6 +1687,11 @@
             margin-right: 16px;
         }
     }
+    .header-top .header-location {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
     .header-banner {
         padding: 50px 60px;
         border-radius: 20px;
@@ -1964,6 +1960,12 @@
     .app-tabs__top p.active:after {
         @apply bg-green
     }
+    .app-tabs__product .app-tabs__top p:after {
+        @apply mt-2
+    }
+    .app-tabs__product .app-tabs__top p.active:after {
+        @apply bg-primary
+    }
     @media (max-width: 768px) {
         .app-tabs__top p {
             @apply border border-solid border-grey rounded-full min-w-[256px] p-[10px]
@@ -1974,8 +1976,21 @@
         .app-tabs__top p:after {
             @apply hidden
         }
+        .app-tabs__product .app-tabs__top p {
+            @apply border-none min-w-max p-0
+        }
     }
-
+    .app-tabs__product-row {
+        position: relative;
+    }
+    .app-tabs__product-row:after {
+        content:'';
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        border-top: 2px dotted #666;
+    }
     .app-tabs__content {
         opacity: 0;
         z-index: -1;
@@ -2300,16 +2315,25 @@
         background-size: 50% 50%;
         @apply border border-solid border-pink rounded-[4px]
     }
+    .form-checkbox.form-checkbox--green label::before {
+        @apply border-green
+    }
 
     .form-checkbox input:not(:disabled):active+label::before {
         background-color: #b3d7ff;
         border-color: #b3d7ff;
         @apply border border-solid border-pink
     }
+    .form-checkbox.form-checkbox--green input:not(:disabled):active+label::before {
+        @apply border-green
+    }
 
     .form-checkbox input:checked+label::before {
         background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
         @apply border border-solid border-pink bg-pink
+    }
+    .form-checkbox.form-checkbox--green input:checked+label::before {
+        @apply border-green bg-green
     }
     .form-checkbox input:disabled+label::before {
         @apply border border-solid border-grey bg-grey;

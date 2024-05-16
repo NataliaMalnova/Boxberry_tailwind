@@ -1,0 +1,77 @@
+{{> partials/_structure/head
+        title="Доставка и возврат товара"
+        keywords="Каталог интернет-магазинов"
+        description="Каталог интернет-магазинов"
+}}
+
+{{> partials/_header/header}}
+    <main class="">
+        {{> partials/app-breadcrumbs/breadcrumbs title= 'доставка и возврат товара: условия, сроки и стоимость' }}
+        <div class="container">
+            <a href="" class="block">
+                <img src="./images/brands/5.svg" alt="brands" class="mx-auto my-4 md:my-[40px] w-max h-[30px] md:h-[50px] max-w-full">
+            </a>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-6">
+                <div class="col-span-2">
+                    <div class="grid grid-cols-2 gap-2">
+                        <div class="w-full h-[200px] sm:h-[300px] md:h-[432px]">
+                            <img src="./images/brands/11.png" alt="" class="object-cover w-full h-full">
+                        </div>
+                        <div class="w-full h-[200px] sm:h-[300px] md:h-[432px]">
+                            <img src="./images/brands/12.png" alt="" class="object-cover w-full h-full">
+                        </div>
+                        <div class="w-full h-[200px] sm:h-[300px] md:h-[432px]">
+                            <img src="./images/brands/13.png" alt="" class="object-cover w-full h-full">
+                        </div>
+                        <div class="w-full h-[200px] sm:h-[300px] md:h-[432px]">
+                            <img src="./images/brands/14.png" alt="" class="object-cover w-full h-full">
+                        </div>
+                    </div>
+                    <div class="mt-6">
+                        {{> partials/app-tabs/tabs-product}}
+                    </div>
+                </div>
+
+                <div class="sticky top-[20px] h-max">
+                    <a href="" class="text-xl text-pink">Calvin Klein</a>
+                    <p class="text-grey50 text-small mt-1">Джинсы </p>
+                    <div class="mt-3">
+                        {{> partials/filter/filter-discont }}
+                    </div>
+                    <div class="mt-3">
+                        {{> partials/select/select-color }}
+                    </div>
+                    <div class="mt-3">
+                        {{> partials/select/select-size }}
+                    </div>
+                    <a href="" class="mt-3 block">Таблица размеров</a>
+
+                    <div class="mt-3 flex items-center justify-end">
+                        <a href="" class="btn btn-primary w-full">Добавить в корзину</a>
+                        <a href="" class="block ml-3 border border-solid border-pink rounded-[4px] p-2">{{> partials/_images/like-pink }}</a>
+                    </div>
+                    <div class="mt-3">
+                        <p class="text-small mb-2">Доставим 18 мая или позже</p>
+                        <p class="flex items-center mt-1"><span class="mr-3">{{> partials/_images/delivery }}</span> B пункты выдачи заказов — бесплатно при покупке от 3 000 ₽</p>
+                        <p class="flex items-center mt-1"><span class="mr-3">{{> partials/_images/car }}</span>По адресу, курьером — бесплатно при покупке от 5 500 ₽</p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="mt-6 md:pt-6">
+                {{> partials/app-sliders/slider-basic swiper_id="swiper_slider_4" slider_title="Похожие"}}
+            </div>
+            <div class="mt-6 md:pt-6">
+                {{> partials/app-sliders/slider-basic swiper_id="swiper_slider_5" slider_title="В том же стиле"}}
+            </div>
+            <div class="mt-6 md:pt-6">
+                {{> partials/app-sliders/slider-basic swiper_id="swiper_slider_6" slider_title="С этим товаром покупают"}}
+            </div>
+            <div class="mt-6 md:pt-6">
+                {{> partials/app-sliders/slider-basic swiper_id="swiper_slider_7" slider_title="Недавно просмотренные"}}
+            </div>
+        </div>
+      </main>
+    {{> partials/_footer/footer}}
+  </body>
+</html>

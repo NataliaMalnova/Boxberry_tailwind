@@ -29,8 +29,6 @@ const openCatalogMenu = () => {
             }
         });
     })
-
-
     document.addEventListener('click', function (event) {
 
         if (!menu.classList.contains('catalog-show')) return;
@@ -50,15 +48,28 @@ const openCatalogMenu = () => {
             }
             return null;
         }
-
         find(event.target);
-
         if (a == 1) return;
-
-        menu.classList.remove('catalog-show');
-        if(burger) burger.classList.remove('open');
-        menu.style.setProperty('max-height', 0);
+        buttons.forEach(btn => {
+            const burger = btn.querySelector('.burger');
+            menu.classList.remove('catalog-show');
+            if(burger) burger.classList.remove('open');
+            menu.style.setProperty('max-height', 0);
+            document.documentElement.style.overflowY = 'auto'
+        })
     });
+    window.addEventListener("resize", () => {
+        if (!menu.classList.contains('catalog-show')) return;
+        buttons.forEach(btn => {
+            const burger = btn.querySelector('.burger');
+            menu.classList.remove('catalog-show');
+            if(burger) burger.classList.remove('open');
+            menu.style.setProperty('max-height', 0);
+            document.documentElement.style.overflowY = 'auto'
+        })
+    });
+
+
 }
 
 const openCatalogSubMenu = () => {

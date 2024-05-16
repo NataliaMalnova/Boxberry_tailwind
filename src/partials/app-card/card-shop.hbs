@@ -1,10 +1,10 @@
-<div class="card-shop w-full flex flex-col justify-between h-full">
+<div class="card-shop w-full h-full flex flex-col justify-between h-full relative">
     <div class="">
         {{#if card_tip}}
             <div class="card-shop__tip fz-small">{{card_tip}}</div>
         {{/if}}
-        <a href class="card-shop__image w-full justify-center items-center">
-            <img src="{{card_img}}" alt="product" class="image-contain" />
+        <a href class="card-shop__image w-full justify-center items-center block h-[135px] md:h-[166px]">
+            <img src="{{card_img}}" alt="product" class="image-contain object-contain w-full w-full" />
         </a>
         <a href="" class="fz-primary mt-4 block">{{card_title}}</a>
     </div>

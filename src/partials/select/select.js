@@ -6,7 +6,8 @@ const openSelect = () => {
 
   select.forEach(elem => {
 
-    const open = elem.querySelector('.js--app-select-title span');
+    const open = elem.querySelector('.js--app-select-title');
+    const open_span = elem.querySelector('.js--app-select-title span')
     const content = elem.querySelector('.js--app-select-content');
     const list = content.querySelectorAll('label');
     const titleDefault = open.innerHTML;
@@ -14,26 +15,26 @@ const openSelect = () => {
     open.addEventListener('click', () => {
       if (!content.classList.contains('select__checkboxShow')) {
         content.classList.add('select__checkboxShow');
-        open.parentNode.classList.add('active');
+        open_span.parentNode.classList.add('active');
       } else {
         content.classList.remove('select__checkboxShow');
-        open.parentNode.classList.remove('active');
+        open_span.parentNode.classList.remove('active');
       }
     });
 
     list.forEach(item => {
       item.addEventListener('click', () => {
         content.classList.remove('select__checkboxShow');
-        open.parentNode.classList.remove('active');
+        open_span.parentNode.classList.remove('active');
       });
     });
     elem.querySelectorAll('input').forEach(item => {
       item.addEventListener('click', () => {
         if (item.checked) {
-          open.innerHTML = item.value;
+          open_span.innerHTML = item.value;
         }
         if (open.innerHTML == ' ' || open.innerHTML == '') {
-          open.innerHTML = titleDefault;
+          open_span.innerHTML = titleDefault;
         }
       })
     });
