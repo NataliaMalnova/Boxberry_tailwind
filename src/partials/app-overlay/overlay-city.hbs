@@ -4,14 +4,12 @@
         <div class="overlay-close overlay-close--absolute cursor-pointer svg-grey js--overlay-close">
             {{> ../_images/close}}
         </div>
-        <div class="overlay-wrap__content flex flex-col mt-5 pt-3">
+        <div class="overlay-wrap__content flex flex-col mt-5 pt-3 overflow-hidden">
             <div class="flex flex-col md:flex-row sm:items-center w-full">
                 {{> overlay-search}}
                 <a href="" class="flex shrink-0 mt-3 md:mt-0 md:ml-5 underline">Определить автоматически</a>
             </div>
-            <div class="overlay-city__container mt-5">
-                {{> ../app-datalist/datalist-city}}
-            </div>
+            {{> ../app-datalist/datalist-city}}
         </div>
     </div>
 </div>

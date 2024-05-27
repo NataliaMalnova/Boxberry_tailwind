@@ -1,6 +1,9 @@
 <div class="catalog-menu__item flex justify-between md:justify-start md:items-center pt-1 pb-1 pl-4 md:pl-3 md:pr-3 {{#if active}}active{{/if}} max-w-full">
     <div class="flex items-center">
-        <img src={{image}} class="mr-3" alt="catalog-image">
+        <div class="w-[16px] h-[16px] mr-3">
+            <img src={{image}} alt="catalog-image" class="object-contain w-full h-full">
+        </div>
+
         <p>{{title}}</p>
     </div>
     <div class="flex items-center md:hidden mr-3 md:mr-0">
