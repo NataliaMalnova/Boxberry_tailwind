@@ -1226,6 +1226,9 @@
         overflow: hidden;
         width: 100%;
     }
+    .compare-slider {
+        padding: 0 2px;
+    }
     .slider-preview__navigation .swiper-button-prev,
     .slider-preview__navigation .swiper-button-next {
         position: absolute;
@@ -2274,12 +2277,19 @@
         height: 44px;
     }
     @media screen and (max-width: 991px) {
+        .pagination-sq {
+            max-width: 100%;
+        }
         .pagination-item_arrow,
         .pagination-sq .pagination-item{
-            width:40px;
+            max-width:40px;
+            width: 100%;
             height: 40px;
+            flex-shrink: 1;
+            
         }
     }
+    
 
     .pagination-sq .pagination-item_arrow svg  {
         transform: rotate(-90deg)
