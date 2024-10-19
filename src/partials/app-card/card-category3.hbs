@@ -1,6 +1,11 @@
 <div class="card-category relative">
-    <a href="" class="card-category__images block relative h-[190px] md:h-[260px]">
-        <img src="../../images/catalog/1.png" alt="" class="object-contain m-auto w-full h-full">
+    <a href="" class="card-category__images card-category__slider block relative h-[190px] md:h-[260px] js--card-slider">
+        <img src="https://cdnvitrina.ru/uploads/product-images/348/geympad-xbox-360-provodnoy-chernyy-2426099347.jpg" alt="" class="object-contain m-auto w-full h-full active">
+        <img src="https://cdnvitrina.ru/uploads/product-images/160/geympad-logitech-f710-serebristyychyornyy-940-000142-2392016078.jpg" alt="" class="object-contain m-auto w-full h-full">
+        <span class="card-category__slider-navigatin">
+            <label></label>
+            <label></label>
+        </span>
         {{#if card_discont}}
             <span class="absolute bottom-0 bg-pink px-1 py-[3px] text-xs text-white w-max rounded-[5px] font-bold left-[12px] bottom-[12px]">{{card_discont}}</span>
         {{/if}}
@@ -14,6 +19,11 @@
                 <a href="" class="line-through text-grey50">{{card_price_old}}</a>
             {{/if}}
 
+            
+            <div class="mt-1 mb-2 flex justify-between items-center">
+                {{> ../app-stars/stars }}
+                <a href="" class="text-greyDark underline">3 отзыва</a>
+            </div>
             <div class="flex items-center justify-between">
                 <a href="" class="text-tiny font-semibold">{{card_price}} <span class="font-light text-grey50 ml-1 text-small">₽</span></a>
                 <div class="flex card-category__action">

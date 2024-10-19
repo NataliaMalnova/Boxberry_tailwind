@@ -21,6 +21,7 @@ import {switchTabs} from "../partials/app-tabs/tabs";
 import {changeTag, clearFilter, filterRange, openFilterMobile, searchFilter} from "../partials/filter/filter";
 import {showTooltip} from "./components/showTooltip";
 import {openSelect} from "../partials/select/select";
+import {showSliderForCard} from "../partials/app-card/card";
 
 // Document Loaded
 document.addEventListener("DOMContentLoaded", () => {
@@ -47,6 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
   clearFilter();
   openSelect();
   openFilterMobile();
+  showSliderForCard();
 
   showTooltip();
   new Swiper(".brand-letter-sliders .swiper", {
