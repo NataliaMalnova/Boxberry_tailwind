@@ -13,16 +13,18 @@
         {{/if}}
     </a>
     <div class="h-[calc(100%-190px)] md:h-[calc(100%-260px)] flex flex-col justify-between p-[5px]">
-        <a href="" class="block mt-2 text-sm hover:underline">{{card_title}}
+        <a href="" class="card-category__title mt-2 text-sm hover:underline">{{card_title}}
             {{> ../app-tooltip/tooltip2 }}
         </a>
         <div class="mt-1">
-            {{#if card_price_old}}
-                <a href="" class="line-through text-grey50">{{card_price_old}}</a>
-            {{/if}}
 
             <div class="flex items-center justify-between">
-                <a href="" class="text-tiny font-semibold">{{card_price}} <span class="font-light text-grey50 ml-1 text-small">₽</span></a>
+                <div class="flex flex-col sm:flex-row sm:items-center">
+                    <a href="" class="text-tiny font-semibold">{{card_price}} <span class="font-light text-grey50 ml-1 text-small">₽</span></a>
+                    {{#if card_price_old}}
+                        <a href="" class="line-through text-grey50 sm:ml-1">{{card_price_old}}</a>
+                    {{/if}}
+                 </div>
                 <div class="flex card-category__action">
                     <a href="" class="block">
                         {{> ../app-tooltip/tooltip-comparison }}
