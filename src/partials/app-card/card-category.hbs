@@ -11,10 +11,10 @@
         </a>
         <div class="mt-1">
             <div class="flex items-center justify-between">
-                <div class="flex flex-col sm:flex-row sm:items-center">
-                    <a href="" class="text-tiny font-semibold">{{card_price}} <span class="font-light text-grey50 ml-1 text-small">₽</span></a>
+                <div class="flex flex-col-reverse sm:flex-row sm:items-center">
+                    <p class="text-tiny font-semibold">{{card_price}} <span class="font-light text-grey50 ml-1 text-small">₽</span></p>
                     {{#if card_price_old}}
-                        <a href="" class="line-through text-grey50 sm:ml-1">{{card_price_old}}</a>
+                        <p class="line-through text-grey50 sm:ml-1">{{card_price_old}}</p>
                     {{/if}}
                  </div>
                 <div class="flex card-category__action">

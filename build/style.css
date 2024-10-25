@@ -4060,6 +4060,12 @@ input:focus, input:active {
       -ms-flex-direction: column;
           flex-direction: column;
 }
+.flex-col-reverse{
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
 .flex-wrap{
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
