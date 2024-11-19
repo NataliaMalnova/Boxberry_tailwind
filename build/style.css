@@ -773,6 +773,9 @@ body{
 .card-category__images {
         position: relative;
         overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 .card-category:hover {
         -webkit-box-shadow: 0 0 25px 5px rgba(94, 104, 129, 0.2);
