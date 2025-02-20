@@ -773,17 +773,42 @@ body{
 .card-category__images {
         position: relative;
         overflow: hidden;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
     }
 .card-category:hover {
         -webkit-box-shadow: 0 0 25px 5px rgba(94, 104, 129, 0.2);
                 box-shadow: 0 0 25px 5px rgba(94, 104, 129, 0.2);
     }
 .card-category .card-category__images img {
+        max-width: unset;
+        position: absolute;
         -webkit-transition: .3s;
         transition: .3s;
+        height: auto !important;
+        -o-object-fit: contain;
+           object-fit: contain;
+        max-width: -webkit-max-content;
+        max-width: -moz-max-content;
+        max-width: max-content;
+        vertical-align: bottom;
+        max-width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
     }
 .card-category__slider img {
         position: absolute;
@@ -3888,6 +3913,9 @@ input:focus, input:active {
 .mt-\[58px\]{
   margin-top: 58px;
 }
+.mt-\[60px\]{
+  margin-top: 60px;
+}
 .mt-\[62px\]{
   margin-top: 62px;
 }
@@ -3896,6 +3924,9 @@ input:focus, input:active {
 }
 .mt-\[67px\]{
   margin-top: 67px;
+}
+.mt-\[6px\]{
+  margin-top: 6px;
 }
 .mt-\[72px\]{
   margin-top: 72px;
@@ -3953,6 +3984,9 @@ input:focus, input:active {
 .h-\[4px\]{
   height: 4px;
 }
+.h-\[50px\]{
+  height: 50px;
+}
 .h-\[70px\]{
   height: 70px;
 }
@@ -4005,6 +4039,9 @@ input:focus, input:active {
 }
 .w-\[4px\]{
   width: 4px;
+}
+.w-\[50px\]{
+  width: 50px;
 }
 .w-full{
   width: 100%;
@@ -4170,6 +4207,10 @@ input:focus, input:active {
   --tw-border-opacity: 1;
   border-color: rgb(237 22 81 / var(--tw-border-opacity));
 }
+.bg-grey3{
+  --tw-bg-opacity: 1;
+  background-color: rgb(236 237 240 / var(--tw-bg-opacity));
+}
 .bg-grey4{
   --tw-bg-opacity: 1;
   background-color: rgb(237 239 241 / var(--tw-bg-opacity));
@@ -4221,8 +4262,14 @@ input:focus, input:active {
 .p-\[10px\]{
   padding: 10px;
 }
+.p-\[12px\]{
+  padding: 12px;
+}
 .p-\[5px\]{
   padding: 5px;
+}
+.p-\[9px\]{
+  padding: 9px;
 }
 .px-1{
   padding-left: 6px;
@@ -4692,6 +4739,10 @@ input:focus, input:active {
     margin-top: 123px;
   }
 
+  .sm\:mt-\[40px\]{
+    margin-top: 40px;
+  }
+
   .sm\:mt-\[45px\]{
     margin-top: 45px;
   }
@@ -4809,6 +4860,14 @@ input:focus, input:active {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+  }
+
+  .sm\:gap-\[24px\]{
+    gap: 24px;
+  }
+
+  .sm\:p-3{
+    padding: 18px;
   }
 
   .sm\:px-4{
@@ -5094,6 +5153,10 @@ input:focus, input:active {
 
   .md\:w-\[380px\]{
     width: 380px;
+  }
+
+  .md\:w-\[calc\(50\%-12px\)\]{
+    width: calc(50% - 12px);
   }
 
   .md\:max-w-\[290px\]{
