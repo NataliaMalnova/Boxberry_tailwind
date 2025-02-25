@@ -1,0 +1,79 @@
+<div class="app-sliders app-sliders__basic w-full js--swiper-basic-small" id="{{swiper_id}}">
+    <div class="relative w-full">
+        <div class="swiper-button-prev flex items-center justify-center relative cursor-pointer">{{> ../_images/arr_slider }}</div>
+        <div class="swiper-button-next flex items-center justify-center relative cursor-pointer">{{> ../_images/arr_slider }}</div>
+        <div class="swiper basic-slider overflow-hidden flex">
+        <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    {{> ../app-card/card-shop-small
+                            card_title="Электробритва Samsung NX125"
+                            card_img="../../images/cards/1.png"
+                            card_price="1 890"
+                            card_price_old="2 150"
+                            card_tip="-5%"
+                    }}
+                </div>
+                <div class="swiper-slide">
+                    {{> ../app-card/card-shop-small
+                            card_title="Триммер Philips C3-260"
+                            card_img="../../images/cards/2.png"
+                            card_price="1 050"
+                    }}
+                </div>
+                <div class="swiper-slide">
+                    {{> ../app-card/card-shop-small
+                                card_title="Электрическая зубная щетка "
+                                card_img="../../images/cards/3.png"
+                                card_price="1 890"
+                                card_price_old="2 150"
+                                card_tip="-10%"
+                        }}
+                </div>
+            <div class="swiper-slide">
+                {{#if slider_women}}
+                    {{> ../app-card/card-shop-small
+                        card_title="Выпрямитель для волос"
+                        card_img="../../images/cards/8.png"
+                        card_price="1 050"
+                    }}
+                </div>
+                {{else}}
+                    {{> ../app-card/card-shop-small
+                        card_title="Электробритва Samsung NX125"
+                        card_img="../../images/cards/4.png"
+                        card_price="1 050"
+                    }}
+                </div>
+                {{/if}}
+                <div class="swiper-slide">
+                    {{> ../app-card/card-shop-small
+                        card_title="Фен Philips C3-260"
+                        card_img="../../images/cards/5.png"
+                        card_price="1 890"
+                        card_price_old="2 150"
+                        card_tip="-5%"
+                    }}
+                </div>
+                <div class="swiper-slide">
+                    {{> ../app-card/card-shop-small
+                        card_title="Электробритва Samsung NX125"
+                        card_img="../../images/cards/3.png"
+                        card_price="1 890"
+                        card_price_old="2 150"
+                        card_tip="-5%"
+                    }}
+                </div>
+                <div class="swiper-slide">
+                    {{> ../app-card/card-shop-small
+                        card_title="Электробритва Samsung NX125"
+                        card_img="../../images/cards/2.png"
+                        card_price="1 890"
+                        card_price_old="2 150"
+                        card_tip="-5%"
+                    }}
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

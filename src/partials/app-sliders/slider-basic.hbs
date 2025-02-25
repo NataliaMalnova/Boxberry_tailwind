@@ -1,5 +1,7 @@
 <div class="app-sliders app-sliders__basic w-full js--swiper-basic" id="{{swiper_id}}">
-    <h3 class="font-primary flex shrink-0 mb-5 pb-2">{{slider_title}}</h3>
+    {{#if slider_title}}
+        <h3 class="font-primary flex shrink-0 mb-5 pb-2">{{slider_title}}</h3>
+    {{/if}}
     <div class="relative w-full">
         <div class="swiper-button-prev flex items-center justify-center relative cursor-pointer">{{> ../_images/arr_slider }}</div>
         <div class="swiper-button-next flex items-center justify-center relative cursor-pointer">{{> ../_images/arr_slider }}</div>

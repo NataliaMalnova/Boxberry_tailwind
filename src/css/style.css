@@ -126,6 +126,15 @@
         right: 0;
         top: 0;
     }
+    .card-shop-small .card-shop-small__top:after {
+        background: rgba(0, 0, 0, .03);
+        bottom: 0;
+        content: " ";
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
     .image-contain {
         max-width: 100%;
         max-height: 100%;

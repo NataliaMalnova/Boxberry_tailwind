@@ -13,7 +13,7 @@ import * as catalog from "../partials/app-catalog/catalog.js";
 import { showMore } from "../partials/show-more/show.js";
 import changeStars from "../partials/app-stars/star.js";
 import * as form from '../partials/app-form/form.js'
-import {sliderBasicInit, sliderCompareInit, sliderComparePaginationInit} from '../partials/app-sliders/slider.js'
+import {sliderBasicInit, sliderCompareInit, sliderComparePaginationInit, sliderBasicSmallInit} from '../partials/app-sliders/slider.js'
 import scrolling from './components/scroll.js'
 import changeFixedTop from '../partials/app-fixed/fixed.js'
 import {showAccordion} from "../partials/app-category/category.js";
@@ -37,6 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
   scrolling();
   changeFixedTop();
   sliderBasicInit();
+  sliderBasicSmallInit();
   sliderCompareInit();
   showAccordion();
   showMore();

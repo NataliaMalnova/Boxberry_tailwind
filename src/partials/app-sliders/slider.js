@@ -30,6 +30,41 @@ const sliderBasicInit = () => {
     })
 }
 
+const sliderBasicSmallInit = () => {
+
+    const sliders = document.querySelectorAll('.js--swiper-basic-small');
+
+    if(sliders.length === 0) return;
+
+    sliders.forEach(slider=> {
+
+        new Swiper('#'+ slider.id + ' .swiper', {
+            modules: [Navigation],
+            slidesPerView: 2,
+            spaceBetween: 8,
+            navigation: {
+                nextEl: '#'+ slider.id + " .swiper-button-next",
+                prevEl: '#'+ slider.id + " .swiper-button-prev",
+            },
+            breakpoints: {
+                675: {
+                    slidesPerView: 3,
+                },
+
+                1100: {
+                    slidesPerView: 4,
+                    spaceBetween: 12,
+                },
+
+                1365: {
+                    slidesPerView: 5,
+                    spaceBetween: 16,
+                }
+            }
+        });
+    })
+}
+
 const sliderCompareInit = () => {
 
     const sliders = document.querySelectorAll('.js--swiper-compare');
@@ -96,5 +131,6 @@ const sliderComparePaginationInit = () => {
 export {
     sliderBasicInit,
     sliderCompareInit,
-    sliderComparePaginationInit
+    sliderComparePaginationInit,
+    sliderBasicSmallInit
 }
