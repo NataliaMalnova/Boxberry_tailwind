@@ -19,7 +19,7 @@ import changeFixedTop from '../partials/app-fixed/fixed.js'
 import {showAccordion} from "../partials/app-category/category.js";
 import {switchTabs} from "../partials/app-tabs/tabs";
 import {changeTag, clearFilter, filterRange, openFilterMobile, searchFilter} from "../partials/filter/filter";
-import {showTooltip} from "./components/showTooltip";
+import {showTooltip, showTooltipInteractive} from "./components/showTooltip";
 import {openSelect} from "../partials/select/select";
 import {showSliderForCard} from "../partials/app-card/card";
 
@@ -52,6 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
   showSliderForCard();
 
   showTooltip();
+  showTooltipInteractive();
   new Swiper(".brand-letter-sliders .swiper", {
     slidesPerView: 'auto'
   });

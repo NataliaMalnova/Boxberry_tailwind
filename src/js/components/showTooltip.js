@@ -21,4 +21,30 @@ const showTooltip = () => {
   })
 }
 
-export {showTooltip}
+const showTooltipInteractive = () => {
+   const tooltips = document.querySelectorAll('.js--tooltip-interactive');
+   if (tooltips.length === 0) return;
+
+  tooltips.forEach(tooltip => {
+    tippy(tooltip, {
+      content(reference) {
+        const id = reference.getAttribute("data-template");
+        const template = document.getElementById(id);
+        if (template) {
+          return template.innerHTML;
+        } else {
+          return null;
+        }
+      },
+      interactive: true,
+      allowHTML: true,
+      hideOnClick: false,
+      theme: "basic",
+      maxWidth: 468,
+      placement: "bottom",
+      // trigger: 'click',
+    });
+  })
+}
+
+export {showTooltip, showTooltipInteractive}

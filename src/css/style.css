@@ -13,6 +13,10 @@
   }
 }
 @layer components {
+    
+    .svg-white svg path {
+        fill: #fff;
+    }
     .card-category {
         border-radius: 5px;
     }
@@ -2103,6 +2107,38 @@
         transition: .2s;
         fill: #fff;
     }
+    .accordion__heading .app-accordion__title {
+        position: relative;
+    }
+    .app-accordion--question.accordion__heading .app-accordion__row.open .app-accordion__title {
+        -webkit-transition: .2s;
+        transition: .2s;
+        background: #fff;
+        color: #363845;
+    }
+    .accordion__heading .app-accordion__title:after,
+    .accordion__heading .app-accordion__title:before {
+        content: ""; position: absolute;
+        width: 20px; height: 2px;
+        top: 50%; right: 16px;
+        background: #363845;
+        transition: all 0.1s;
+    }
+    .accordion__heading.app-accordion--question .app-accordion__row:hover .app-accordion__title {
+        background: none;
+    }
+     .accordion__heading  .app-accordion__row.open .app-accordion__title:before {
+        transform: rotate(180deg);
+        transition: all 0.3s;
+    }
+
+    .accordion__heading .app-accordion__row .app-accordion__title:before {
+        transform: rotate(90deg);
+        transition: all 0.1s;
+    }
+    .accordion__heading .app-accordion__row:hover, .accordion__heading .app-accordion__row.open {
+        box-shadow: none;
+    }
     
     @media (min-width: 768px) {
         .card-match__content {
@@ -2562,6 +2598,18 @@
 }
 .tippy-box[data-theme="light"] .tippy-arrow {
    display: none;
+}
+.tippy-box[data-theme~=basic] {
+    color: #26323d;
+    -webkit-box-shadow: 0 0 20px 4px rgba(154, 161, 177, .15), 0 4px 80px -8px rgba(36, 40, 47, .25), 0 4px 4px -2px rgba(91, 94, 105, .15);
+    box-shadow: 0 0 20px 4px rgba(154, 161, 177, .15), 0 4px 80px -8px rgba(36, 40, 47, .25), 0 4px 4px -2px rgba(91, 94, 105, .15);
+    background-color: #fff;
+    
+}
+.tippy-box[data-theme~=basic] .tippy-arrow {
+    width: 16px;
+    height: 16px;
+    color: #e81951;
 }
 
 @layer utilities {

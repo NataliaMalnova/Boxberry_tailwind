@@ -5,11 +5,25 @@
     </div>
     <div class="content-to-hide js--show-more--content">
         <div class="filter-option mt-2 ">
-            <a href="" class="text-tiny py-1 block">Ссылка 1 <span class="text-sm text-arrow">(6)</span></a>
-            <a href="" class="text-tiny py-1 block">Ссылка 2 <span class="text-sm text-arrow">(6)</span></a>
-            <a href="" class="text-tiny py-1 block">Ссылка 3 <span class="text-sm text-arrow">(6)</span></a>
-            <a href="" class="text-tiny py-1 block">Ссылка 4 <span class="text-sm text-arrow">(6)</span></a>
+            <a href="" class="text-tiny py-1 flex items-center flex-wrap">Ссылка 1 <span class="text-sm text-arrow">(6)</span>
+                <span class="js--tooltip-interactive w-[18px] h-[18px] p-[2px] bg-pink flex items-center justify-center rounded-[2px] svg-white ml-1" data-template="tooltip-link">{{> ../_images/question }}</span> 
+            </a>
+            <a href="" class="text-tiny py-1 flex items-center flex-wrap">Ссылка 2 <span class="text-sm text-arrow">(6)</span>
+                <span class="js--tooltip-interactive w-[18px] h-[18px] p-[2px] bg-pink flex items-center justify-center rounded-[2px] svg-white ml-1" data-template="tooltip-link2">{{> ../_images/question }}</span> 
+             </a>
+            <a href="" class="text-tiny py-1 flex items-center flex-wrap">Ссылка 3 <span class="text-sm text-arrow">(6)</span></a>
+            <a href="" class="text-tiny py-1 flex items-center flex-wrap">Ссылка 4 <span class="text-sm text-arrow">(6)</span></a>
         </div>
     </div>
 </div>
 
+<div class="hidden" id="tooltip-link">
+  <p>Небольшая подсказка</p>
+</div>
+<div class="hidden" id="tooltip-link2">
+    <div class="p-2">
+        <h4>Много текста с ссылкой и другими элементами</h4>
+        <p class="mt-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, molestias sint. Voluptatibus, minima cum. Laborum, doloribus ipsam assumenda numquam officiis quasi, delectus est ipsa quos deleniti exercitationem, dicta similique quod.</p>
+        <a href="/" class="mt-1 block text-pink">Ссылка куда-то</a>
+    </div>
+</div>
