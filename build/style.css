@@ -3865,6 +3865,9 @@ input:focus, input:active {
 .mb-5{
   margin-bottom: 30px;
 }
+.mb-\[-3\.5px\]{
+  margin-bottom: -3.5px;
+}
 .mb-\[36px\]{
   margin-bottom: 36px;
 }
