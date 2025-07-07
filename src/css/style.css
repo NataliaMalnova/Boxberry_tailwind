@@ -17,6 +17,9 @@
     .svg-white svg path {
         fill: #fff;
     }
+    .svg-pink svg path {
+        fill: #ed1651;
+    }
     .card-category {
         border-radius: 5px;
     }
