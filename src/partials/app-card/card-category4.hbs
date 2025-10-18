@@ -1,0 +1,28 @@
+<div class="card-category relative">
+    <a href="" class="card-category__images flex relative h-[190px] md:h-[260px]">
+        <img src="../../images/catalog/1.jpg" alt="" class="object-contain m-auto w-full h-full">
+        {{#if card_discont}}
+            <span class="absolute bottom-0 bg-pink px-1 py-[3px] text-xs text-white w-max rounded-[5px] font-bold left-[12px] bottom-[12px]">{{card_discont}}</span>
+        {{/if}}
+    </a>
+    <div class="h-[calc(100%-190px)] md:h-[calc(100%-270px)] flex flex-col justify-between p-[5px]">
+        <div class="mt-2">
+            <a href="" class="text-sm font-semibold">Brand</a>
+            <a href="" class="text-sm hover:underline card-category__title">{{card_title}}</a>
+        </div>
+        <div class="mt-1">
+            <div class="flex items-center justify-between">
+                <div class="flex flex-col-reverse sm:flex-row sm:items-center">
+                    <p class="text-tiny font-semibold">{{card_price}} <span class="font-light text-grey50 ml-1 text-small">₽</span></p>
+                 </div>
+            </div>
+            <p class="text-[11px] text-greyElem">От Lamoda</p>
+            <div class="flex items-center mt-1">
+                <div class="w-[18px] h-[18px] svg-100">
+                    {{> ../_images/box }}
+                </div>
+                <p class="text-[11px] ml-1">Shipping: Free</p>
+            </div>
+        </div>
+    </div>
+</div>

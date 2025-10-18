@@ -128,9 +128,33 @@ const sliderComparePaginationInit = () => {
     })
 }
 
+const sliderProgressInit = () => {
+
+    const sliders = document.querySelectorAll('.js--swiper-progress');
+
+    if(sliders.length === 0) return;
+
+    sliders.forEach(slider=> {
+        new Swiper('#'+ slider.id + ' .swiper', {
+            modules: [Navigation, Pagination ],
+            slidesPerView: 1,
+            spaceBetween: 0,
+            navigation: {
+                nextEl: '#'+ slider.id + " .swiper-button-next",
+                prevEl: '#'+ slider.id + " .swiper-button-prev",
+            },
+            pagination: {
+                el: '#'+ slider.id + ' .swiper-pagination',
+                type: 'progressbar',
+            }
+        });
+    })
+}
+
 export {
     sliderBasicInit,
     sliderCompareInit,
     sliderComparePaginationInit,
-    sliderBasicSmallInit
+    sliderBasicSmallInit,
+    sliderProgressInit
 }

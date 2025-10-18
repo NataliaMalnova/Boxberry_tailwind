@@ -13,7 +13,7 @@ import * as catalog from "../partials/app-catalog/catalog.js";
 import { showMore } from "../partials/show-more/show.js";
 import changeStars from "../partials/app-stars/star.js";
 import * as form from '../partials/app-form/form.js'
-import {sliderBasicInit, sliderCompareInit, sliderComparePaginationInit, sliderBasicSmallInit} from '../partials/app-sliders/slider.js'
+import {sliderBasicInit, sliderCompareInit, sliderComparePaginationInit, sliderBasicSmallInit, sliderProgressInit} from '../partials/app-sliders/slider.js'
 import scrolling from './components/scroll.js'
 import changeFixedTop from '../partials/app-fixed/fixed.js'
 import {showAccordion} from "../partials/app-category/category.js";
@@ -22,6 +22,7 @@ import {changeTag, clearFilter, filterRange, openFilterMobile, searchFilter} fro
 import {showTooltip, showTooltipInteractive} from "./components/showTooltip";
 import {openSelect} from "../partials/select/select";
 import {showSliderForCard} from "../partials/app-card/card";
+import {btnUp} from "../partials/btn-up/btn-up";
 
 // Document Loaded
 document.addEventListener("DOMContentLoaded", () => {
@@ -39,6 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
   sliderBasicInit();
   sliderBasicSmallInit();
   sliderCompareInit();
+  sliderProgressInit();
   showAccordion();
   showMore();
   switchTabs();
@@ -50,6 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
   openSelect();
   openFilterMobile();
   showSliderForCard();
+  btnUp()
 
   showTooltip();
   showTooltipInteractive();

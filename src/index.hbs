@@ -7,62 +7,24 @@
     {{> partials/_header/header}}
     <main>
         {{> partials/app-breadcrumbs/breadcrumbs title= 'Бренды' }}
-        <div class="container">
-            <h1 class="uppercase">Каталог интернет-магазинов</h1>
-
-            <div class="grid grid-cols-2 md:grid-cols-4 sm:grid-cols-3 gap-7 mt-5 sm:mt-6 pt-1 sm:pt-0">
-                <div class="w-full">
-                    {{> partials/app-card/card-catalog title="Ecco" ecco=true }}
-                </div>
-                <div class="w-full">
-                    {{> partials/app-card/card-catalog title="Reserved" reserved=true }}
-                </div>
-                <div class="w-full">
-                    {{> partials/app-card/card-catalog title="Cropp" cropp=true }}
-                </div>
-                <div class="w-full">
-                    {{> partials/app-card/card-catalog title="Ecco" ecco=true }}
-                </div>
-                <div class="w-full">
-                    {{> partials/app-card/card-catalog title="Cropp" cropp=true }}
-                </div>
-                <div class="w-full">
-                    {{> partials/app-card/card-catalog title="Ecco" ecco=true }}
-                </div>
-                <div class="w-full">
-                    {{> partials/app-card/card-catalog title="Reserved" reserved=true }}
-                </div>
-                <div class="w-full">
-                    {{> partials/app-card/card-catalog title="Cropp" cropp=true }}
-                </div>
-                <div class="w-full">
-                    {{> partials/app-card/card-catalog title="Ecco" ecco=true }}
-                </div>
-                <div class="w-full">
-                    {{> partials/app-card/card-catalog title="Reserved" reserved=true }}
-                </div>
-                <div class="w-full">
-                    {{> partials/app-card/card-catalog title="Cropp" cropp=true }}
-                </div>
-                <div class="w-full">
-                    {{> partials/app-card/card-catalog title="Ecco" ecco=true }}
-                </div>
-                <div class="w-full">
-                    {{> partials/app-card/card-catalog title="Cropp" cropp=true }}
-                </div>
-                <div class="w-full">
-                    {{> partials/app-card/card-catalog title="Reserved" reserved=true }}
-                </div>
-                <div class="w-full">
-                    {{> partials/app-card/card-catalog title="Reserved" reserved=true }}
-                </div>
-                <div class="w-full">
-                    {{> partials/app-card/card-catalog title="Cropp" cropp=true }}
-                </div>
-            </div>
-            <div class="mt-5 sm:mt-6 md:hidden">
-                {{> partials/app-pagination/pagination }}
-            </div>
+        <div class="container flex flex-col gap-2 mt-2">
+          <h2 class="uppercase">СПИСОК СТРАНИЦ</h2>
+          <a href="/ui.html" target="_blank" class="block">Готовые элементы</a>
+          <a href="/index2.html" target="_blank" class="block">Каталог интернет-магазинов</a>
+          <a href="/brand.html" target="_blank" class="block">Бренды</a>
+          <a href="/categories.html" target="_blank" class="block">Категории</a>
+          <a href="/category.html" target="_blank" class="block">Категория</a>
+          <a href="/categoryOld.html" target="_blank" class="block">Категория V2</a>
+          <a href="/compare.html" target="_blank" class="block">Сравнение</a>
+          <a href="/contact.html" target="_blank" class="block">Контакты</a>
+          <a href="/delivery.html" target="_blank" class="block">Доставка</a>
+          <a href="/main.html" target="_blank" class="block">Главная</a>
+          <a href="/order.html" target="_blank" class="block">Как сделать заказ</a>
+          <a href="/product.html" target="_blank" class="block">Страница продукта</a>
+          <a href="/shop.html" target="_blank" class="block">Каталог</a>
+          <a href="/support.html" target="_blank" class="block">Форма связи</a>
+          <a href="/test.html" target="_blank" class="block">Участие в закрытом тестировании</a>
+          <a href="/shop.html" target="_blank" class="block">Каталог интернет-магазинов</a>
         </div>
       </main>
     {{> partials/_footer/footer}}
