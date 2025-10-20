@@ -135,6 +135,10 @@ const sliderProgressInit = () => {
     if(sliders.length === 0) return;
 
     sliders.forEach(slider=> {
+        const sl = slider.getAttribute('data-slide') || 1
+        const sl_talet = slider.getAttribute('data-slide-tablet') || 1
+        const space = slider.getAttribute('data-space') || 0
+        const space_talet = slider.getAttribute('data-space-tablet') || 0
         new Swiper('#'+ slider.id + ' .swiper', {
             modules: [Navigation, Pagination ],
             slidesPerView: 1,
@@ -145,7 +149,18 @@ const sliderProgressInit = () => {
             },
             pagination: {
                 el: '#'+ slider.id + ' .swiper-pagination',
-                type: 'progressbar',
+                type: 'progressbar'
+            },
+            breakpoints: {
+                675: {
+                    slidesPerView: sl_talet,
+                    spaceBetween: space_talet
+                },
+
+                1199: {
+                    slidesPerView: sl,
+                    spaceBetween: space
+                }
             }
         });
     })

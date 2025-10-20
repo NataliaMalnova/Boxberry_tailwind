@@ -1,29 +1,49 @@
-<div class="app-sliders app-sliders__progress w-full js--swiper-progress" id="{{swiper_id}}">
+<div class="app-sliders app-sliders__progress w-full js--swiper-progress" id="{{swiper_id}}" data-slide="3" data-slide-tablet="20" data-space="24" data-space-tablet="10">
     {{#if slider_title}}
         <h2 class="font-primary flex shrink-0 mb-5 pb-2">{{slider_title}}</h2>
     {{/if}}
     <div class="relative w-full">
         <div class="swiper basic-slider overflow-hidden flex">
             <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <div class="flex justify-center w-full">
-                        <iframe src="https://player.vimeo.com/video/76979871" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                <div class="swiper-slide w-full">
+                    <div class="flex justify-center video-container">
+                        <iframe src="https://player.vimeo.com/video/76979871" class="video" width="100%" height="100%" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <div class="flex justify-center w-full">
-                        <iframe src="https://player.vimeo.com/video/76979871" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                    <div class="flex justify-center video-container">
+                        <iframe src="https://player.vimeo.com/video/76979871" class="video" width="100%" height="auto" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div> 
+                <div class="swiper-slide">
+                    <div class="flex justify-center video-container">
+                        <iframe src="https://player.vimeo.com/video/76979871" class="video" width="100%" height="auto" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <div class="flex justify-center w-full">
-                        <iframe src="https://player.vimeo.com/video/76979871" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                    <div class="flex justify-center video-container">
+                        <iframe src="https://player.vimeo.com/video/76979871" class="video" width="100%" height="auto" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="flex justify-center video-container">
+                        <iframe src="https://player.vimeo.com/video/76979871" class="video" width="100%" height="auto" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="flex justify-center video-container">
+                        <iframe src="https://player.vimeo.com/video/76979871" class="video" width="100%" height="auto" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="flex justify-center video-container">
+                        <iframe src="https://player.vimeo.com/video/76979871" class="video" width="100%" height="auto" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="flex items-center">
+    <div class="flex items-center mt-3">
         <div class="swiper-pagination w-full bg-grey h-[4px] rounded-[20px] flex justify-start overflow-hidden"></div>
         <div class="flex flex-shrink-0 gap-1 ml-2">
             <div class="swiper-button-prev flex items-center justify-center relative cursor-pointer">{{> ../_images/arr_slider }}</div>

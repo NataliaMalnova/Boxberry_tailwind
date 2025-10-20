@@ -2610,6 +2610,19 @@ input:focus, input:active {
         -webkit-transform-origin: top left;
                 transform-origin: top left;
     }
+.video-container {
+        position: relative;
+        width: 100%;
+        padding-bottom: 56.25%;
+    }
+.video-container .video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+    }
 .link-underline span {
         -webkit-transition: 0.3s;
         transition: 0.3s;
